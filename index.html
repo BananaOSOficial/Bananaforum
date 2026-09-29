@@ -46,6 +46,20 @@
       #menucominicioecriarcomunidade button svg:hover {
 			fill: #5b8def;
 	  }
+		#janelacriarcomunidade {
+			display: none;
+			width: 100vw;
+			height: 100vh;
+			background: rgb(15,15,15);
+			border: 2px solid rgba(255,255,255,0.08);
+		}
+		#janelacriarcomunidade button {
+			background-color: #303134
+			border-radius: 999px;
+		}
+		#iniciobtn.selecionado {
+			border-bottom: 2px solid #FFFFFF;
+		}	
     </style>
   </head>
   <body>
@@ -77,5 +91,26 @@
     <main>
       <h2>Comunidades</h2>
     </main>
+	  <div id="janelacriarcomunidade">
+		  <button class="fecharjanelacomunidade">X</button>
+		  <h2>Criar comunidade</h2>
+		  <p>Nome da comunidade</p>
+		  <input placehoder="Nome">
+	  </div>
+	  <script>
+		  const criarcomunidadebtn = document.getElementById('criarcomunidadebtn');
+		  const fecharjanelacomunidadebtn = document.querySelector('fecharjanelacomunidade');
+		  const janelacriarcomunidade = document.getElementById('janelacriarcomunidade');
+		  const iniciobtn = document.getElementById('iniciobtn');
+		  criarcomunidadebtn.onclick = function() {
+			  janelacriarcomunidade.style.display = 'block';
+		  }
+		  fecharjanelacomunidadebtn.onclick = function() {
+			  janelacriarcomunidade.style.display = 'none';
+		  }
+		  if janelacriarcomunidade.style.display == 'none' {
+		  iniciobtn.classList.add = 'selecionado';
+		  }
+	  </script>
   </body>
 </html>
