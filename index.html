@@ -54,7 +54,7 @@
 			border: 2px solid rgba(255,255,255,0.08);
 		}
 		#janelacriarcomunidade button {
-			background-color: #303134
+			background-color: #303134;
 			border-radius: 999px;
 		}
 		#iniciobtn.selecionado {
@@ -99,7 +99,7 @@
 	  </div>
 	  <script>
 		  const criarcomunidadebtn = document.getElementById('criarcomunidadebtn');
-		  const fecharjanelacomunidadebtn = document.querySelector('fecharjanelacomunidade');
+		  const fecharjanelacomunidadebtn = document.querySelector('.fecharjanelacomunidade');
 		  const janelacriarcomunidade = document.getElementById('janelacriarcomunidade');
 		  const iniciobtn = document.getElementById('iniciobtn');
 		  criarcomunidadebtn.onclick = function() {
@@ -108,7 +108,7 @@
 		  fecharjanelacomunidadebtn.onclick = function() {
 			  janelacriarcomunidade.style.display = 'none';
 		  }
-		  if janelacriarcomunidade.style.display == 'none' {
+		  if (janelacriarcomunidade.style.display == 'none') {
 		  iniciobtn.classList.add = 'selecionado';
 		  }
 	  </script>
