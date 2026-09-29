@@ -75,6 +75,16 @@
 		input:focus {
 			outline: 1px solid #F7D117;
 		}
+		#modelo-comunidade {
+			background-color: #303134;
+			border: 1px solid rgba(255,255,255,0.08);
+			border-radius: 10px;
+		}
+		#container-comunidade {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
     </style>
   </head>
   <body>
@@ -105,12 +115,17 @@
     </div>
     <main>
       <h2>Comunidades</h2>
+	  <div id="modelo-comunidade">
+		  <h2 id="nome">Nome da comunidade</h2>
+	  </div>
+		<div id="container-comunidade"></div>
     </main>
 	  <div id="janelacriarcomunidade">
 		  <button class="fecharjanelacomunidade">X</button>
 		  <h2>Criar comunidade</h2>
 		  <p>Nome da comunidade</p>
-		  <input placeholder="Nome">
+		  <input id="inputNomedacomunidade" placeholder="Nome">
+		  <button id="criar">Criar comunidade</button>
 	  </div>
 	  <script>
 		  const criarcomunidadebtn = document.getElementById('criarcomunidadebtn');
@@ -125,6 +140,19 @@
 		  fecharjanelacomunidadebtn.onclick = function() {
 			  iniciobtn.classList.add('selecionado');
 			  janelacriarcomunidade.style.display = 'none';
+		  }
+		  const inputNomedacomunidade = document.getElementById('inputNomedacomunidade');
+		  const container = document.getElementById('container-comunidade');
+		  const botaocriarcomunidade = document.getElementById('criar');
+		  const modelo = document.getElementById('modelo-comunidade')!
+
+		  criar.addEventListener('click', () => {
+			  const novomodelo = modelo.cloneNode(true);
+			  novomodelo.style.display = 'block';
+			  const novoNome = inputNomedacomunidade.value;
+			  const nome = novomodelo.querySelector('#nome');
+			  nome.textContent = 'novoNome';
+			  content.appendChild(novomodelo);
 		  }
 	  </script>
   </body>
