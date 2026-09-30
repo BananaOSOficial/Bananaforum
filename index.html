@@ -153,6 +153,7 @@
 		.container-conversa {
 			display: flex;
 			flex-direction: column;
+			padding: 20px;
 		}
 		.caixa-conversa {
 			display: none;
@@ -283,6 +284,7 @@
 		  const textodoinput = chat.value;
 		  const textodaconversa = novacaixaconversa.querySelector('#texto-conversa');
 		  textodaconversa.textContent = textodoinput;
+		  chat.value = "";
 		  })
 	  </script>
   </body>
