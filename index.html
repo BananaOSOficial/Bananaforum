@@ -242,12 +242,12 @@
 		  const chat = document.getElementById('chat');
 		  const caixaconversa = document.querySelector('.caixa-conversa');
 		  const textoconversa = document.getElementById('texto-conversa');
-		  const container-conversa = document.querySelector('.container-conversa');
+		  const containerconversa = document.querySelector('.container-conversa');
 		  const enviarbtn = document.getElementById('enviar');
 		  enviarbtn.addEventListener('click', () => {
-		  novacaixaconversa = caixa-conversa.cloneNode(true);
+		  novacaixaconversa = caixaconversa.cloneNode(true);
 		  novacaixaconversa.style.display = 'flex';
-		  containerconversa.appendChild(novacaixa-conversa);
+		  containerconversa.appendChild(novacaixaconversa);
 		  const textodoinput = chat.value;
 		  const textodaconversa = novacaixaconversa.querySelector('#texto-conversa');
 		  textodaconversa.textContent = textodoinput;
