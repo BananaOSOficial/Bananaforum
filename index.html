@@ -192,10 +192,11 @@
     </main>
 	  <div id="janeladascomunidades">
 		  <div class="caixa-conversa">
-			  <p>Texto da conversa</p>
+			  <p id="texto-conversa">Texto da conversa</p>
 		  </div>
 		  <div class="container-conversa"></div>
 		  <textarea id="chat" placeholder="Converse com outros dessa comunidade"></textarea>
+		  <button id="enviar">Enviar</button>
 	  </div>
 	  <div id="janelacriarcomunidade">
 		  <button class="fecharjanelacomunidade">X</button>
@@ -233,6 +234,24 @@
 			  inputNomedacomunidade.value = ''
 			  janelacriarcomunidade.style.display = 'none';
 			  iniciobtn.classList.add('selecionado');
+		  })
+		  const nomedacomunidade = document.getElementById('nome');
+		  const janeladascomunidades = document.querySelector('.janeladascomunidades');
+		  nomedacomunidade.onclick = function() {
+			  janeladascomunidades.style.display = 'block';
+		  }
+		  const chat = document.getElementById('chat');
+		  const caixa-conversa = document.querySelector('.caixa-conversa');
+		  const texto-conversa = document.getElementById('texto-conversa');
+		  const container-conversa = document.querySelector('.container-conversa');
+		  const enviarbtn = document.getElementById('enviar');
+		  enviar.addEventListener('click', () => {
+		  novacaixa-conversa = caixa-conversa.clodeNode(true);
+		  novacaixa-conversa.style.display = 'flex';
+		  container-conversa.appendChild(novacaixa-conversa);
+		  const textodoinput = chat.value;
+		  const textodaconversa = novacaixa-conversa.querySelector('#texto-conversa');
+		  textodaconversa.textContent = textodoinput;
 		  })
 	  </script>
   </body>
