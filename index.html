@@ -235,7 +235,7 @@
 			  iniciobtn.classList.add('selecionado');
 		  })
 		  const nomedacomunidade = document.getElementById('nome');
-		  const janeladascomunidades = document.querySelector('.janeladascomunidades');
+		  const janeladascomunidades = document.querySelector('#janeladascomunidades');
 		  nomedacomunidade.onclick = function() {
 			  janeladascomunidades.style.display = 'block';
 		  }
@@ -245,7 +245,7 @@
 		  const container-conversa = document.querySelector('.container-conversa');
 		  const enviarbtn = document.getElementById('enviar');
 		  enviarbtn.addEventListener('click', () => {
-		  novacaixa-conversa = caixa-conversa.clodeNode(true);
+		  novacaixa-conversa = caixa-conversa.cloneNode(true);
 		  novacaixa-conversa.style.display = 'flex';
 		  container-conversa.appendChild(novacaixa-conversa);
 		  const textodoinput = chat.value;
