@@ -138,17 +138,21 @@
 		   color: #FFFFFF;
 		   border-radius: 20px;
 		   resize: none;
-			border: 2px solid rgba(255,255,255,0.05);
+			border: none;
 			width: 500px;
 		}
 		#janeladascomunidades textarea:focus {
-			border-color: #F7D117;
+			outline: 2px solid #F7D117;
 		}
 		#janeladascomunidades button {
 			background-color: #303134;
 			color: #FFFFFF;
 				border-radius: 999px;
 				border: 2px solid rgba(255,255,255,0.05);
+		}
+		#janeladascomunidades button:hover {
+			background-color: #F7D117;
+			border-color: yellow;
 		}
 		.container-conversa {
 			display: flex;
@@ -158,10 +162,11 @@
 		.caixa-conversa {
 			display: none;
 			color: #FFFFFF;
-			background-color: #303134;
+			background-color: transparent;
 			border-radius: 20px;
 			border: 2px solid rgba(255,255,255,0.05);
-			width: 100px;
+			word-wrap: break-word;
+		    overflow-wrap: break-word;
 		}
 		#chatebtn {
 			flex-direction: row;
