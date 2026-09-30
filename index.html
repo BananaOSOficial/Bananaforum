@@ -185,7 +185,7 @@
       <h2>Comunidades</h2>
 		</div>
 	  <div id="modelo-comunidade">
-		  <h2 id="nome">Nome da comunidade</h2>
+		  <h2 class="nome">Nome da comunidade</h2>
 	  </div>
 		<div id="container-comunidade"></div>
     </main>
@@ -222,30 +222,30 @@
 		  const container = document.getElementById('container-comunidade');
 		  const botaocriarcomunidade = document.getElementById('criar');
 		  const modelo = document.getElementById('modelo-comunidade');
-
-		  criar.addEventListener('click', () => {
+          const janeladascomunidades = document.getElementById('janeladascomunidades');
+		  botaocriarcomunidade.addEventListener('click', () => {
 			  const novomodelo = modelo.cloneNode(true);
+			  novomodelo.removeAttribute('id');
 			  novomodelo.style.display = 'block';
 			  const novoNome = inputNomedacomunidade.value;
-			  const nome = novomodelo.querySelector('#nome');
+			  const nome = novomodelo.querySelector('.nome');
 			  nome.textContent = novoNome;
+			  nome.onclick = () => {
+		      janeladascomunidades.style.display = 'flex';
+		  };
 			  container.appendChild(novomodelo);
 			  inputNomedacomunidade.value = ''
 			  janelacriarcomunidade.style.display = 'none';
 			  iniciobtn.classList.add('selecionado');
 		  })
-		  const nomedacomunidade = document.getElementById('nome');
-		  const janeladascomunidades = document.querySelector('#janeladascomunidades');
-		  nomedacomunidade.onclick = function() {
-			  janeladascomunidades.style.display = 'block';
-		  }
+		  const nomedacomunidade = document.querySelector('.nome');
 		  const chat = document.getElementById('chat');
 		  const caixaconversa = document.querySelector('.caixa-conversa');
 		  const textoconversa = document.getElementById('texto-conversa');
 		  const containerconversa = document.querySelector('.container-conversa');
 		  const enviarbtn = document.getElementById('enviar');
 		  enviarbtn.addEventListener('click', () => {
-		  novacaixaconversa = caixaconversa.cloneNode(true);
+		  const novacaixaconversa = caixaconversa.cloneNode(true);
 		  novacaixaconversa.style.display = 'flex';
 		  containerconversa.appendChild(novacaixaconversa);
 		  const textodoinput = chat.value;
