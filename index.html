@@ -122,6 +122,29 @@
 			left: 50%;
 			transform: translateX(-50%);
 		}
+		#janeladascomunidades {
+			display: none;
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			background-color: #0F0F0F;
+		}
+		#janeladascomunidades textarea {
+	       display: flex;
+		   bottom: 0;
+		   background-color: #303134;
+		   border-radius: 20px;
+		}
+		.container-conversa {
+			display: flex;
+			flex-direction: column;
+		}
+		.caixa-conversa {
+			color: #FFFFFF;
+			background-color: #303134;
+			border-radius: 20px;
+			border: 2px solid rgba(255,255,255,0.05);
+		}
     </style>
   </head>
   <body>
@@ -167,6 +190,13 @@
 	  </div>
 		<div id="container-comunidade"></div>
     </main>
+	  <div id="janeladascomunidades">
+		  <div class="caixa-conversa">
+			  <p>Texto da conversa</p>
+		  </div>
+		  <div class="container-conversa"></div>
+		  <textarea id="chat" placeholder="Converse com outros dessa comunidade"></textarea>
+	  </div>
 	  <div id="janelacriarcomunidade">
 		  <button class="fecharjanelacomunidade">X</button>
 		  <h2>Criar comunidade</h2>
