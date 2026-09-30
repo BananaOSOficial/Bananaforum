@@ -15,7 +15,6 @@
       body {
         background-color: #0F0F0F;
         color: #FFFFFF;
-	    box-sizing: border-box;
       }
 		h2 {
 			text-align: center;
@@ -245,7 +244,7 @@
 		  const texto-conversa = document.getElementById('texto-conversa');
 		  const container-conversa = document.querySelector('.container-conversa');
 		  const enviarbtn = document.getElementById('enviar');
-		  enviar.addEventListener('click', () => {
+		  enviarbtn.addEventListener('click', () => {
 		  novacaixa-conversa = caixa-conversa.clodeNode(true);
 		  novacaixa-conversa.style.display = 'flex';
 		  container-conversa.appendChild(novacaixa-conversa);
