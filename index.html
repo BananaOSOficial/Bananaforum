@@ -169,6 +169,7 @@
 		    overflow-wrap: break-word;
 			word-break: break-word;
 			max-height: 500px;
+			gap: 5px;
 		}
 		#chatebtn {
 			flex-direction: row;
@@ -179,6 +180,10 @@
 			transform: translateX(-50%);
 			bottom: 40px;
 			gap: 15px;
+		}
+		.fecharjaneladascomunidades {
+			width: 32px;
+			height: 32px;
 		}
     </style>
   </head>
@@ -226,6 +231,7 @@
 		<div id="container-comunidade"></div>
     </main>
 	  <div id="janeladascomunidades">
+		  <button class="fecharjaneladascomunidades">X</button>
 		  <div class="caixa-conversa">
 			  <p id="texto-conversa">Texto da conversa</p>
 		  </div>
@@ -295,6 +301,11 @@
 		  textodaconversa.textContent = textodoinput;
 		  chat.value = "";
 		  })
+		  const fecharjaneladascomunidades = document.querySelector('.fecharjaneladascomunidades');
+		  fecharjaneladascomunidades.onclick = function() {
+		  janeladascomunidades.style.display = 'none';
+		  iniciobtn.classList.add('selecionado');
+		  }
 	  </script>
   </body>
 </html>
