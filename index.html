@@ -233,7 +233,7 @@
 	  <div id="janeladascomunidades">
 		  <button class="fecharjaneladascomunidades">X</button>
 		  <div class="caixa-conversa">
-			  <p id="texto-conversa">Texto da conversa</p>
+			  <p class="texto-conversa"></p>
 		  </div>
 		  <div class="container-conversa"></div>
 		  <div id="chatebtn">
@@ -289,7 +289,7 @@
 		  const containerconversa = document.querySelector('.container-conversa');
 		  const enviarbtn = document.getElementById('enviar');
 		  enviarbtn.addEventListener('click', () => {
-		  if (chat.value == "") {
+		  if (chat.value.trim() === "") {
 		  alert('Escreva algo primeiro');
 		  return;
 		  }
@@ -297,7 +297,7 @@
 		  novacaixaconversa.style.display = 'flex';
 		  containerconversa.appendChild(novacaixaconversa);
 		  const textodoinput = chat.value;
-		  const textodaconversa = novacaixaconversa.querySelector('#texto-conversa');
+		  const textodaconversa = novacaixaconversa.querySelector('.texto-conversa');
 		  textodaconversa.textContent = textodoinput;
 		  chat.value = "";
 		  })
