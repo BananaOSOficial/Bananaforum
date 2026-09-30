@@ -162,6 +162,10 @@
 			border-radius: 20px;
 			border: 2px solid rgba(255,255,255,0.05);
 		}
+		#chatebtn {
+			align-items: center;
+			display: flex;
+		}
     </style>
   </head>
   <body>
@@ -212,8 +216,10 @@
 			  <p id="texto-conversa">Texto da conversa</p>
 		  </div>
 		  <div class="container-conversa"></div>
+		  <div id="chatebtn">
 		  <textarea id="chat" placeholder="Converse com outros dessa comunidade"></textarea>
 		  <button id="enviar">Enviar</button>
+		  </div>
 	  </div>
 	  <div id="janelacriarcomunidade">
 		  <button class="fecharjanelacomunidade">X</button>
