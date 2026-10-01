@@ -226,6 +226,11 @@
 		.nomeusuario:hover {
 			color: #F7D117;
 		}
+		#inputnomeecriarcontabtn {
+			display: flex;
+			left: 50%;
+			transform: translateX(-50%);
+		}
     </style>
   </head>
   <body>
@@ -297,8 +302,10 @@
 	  <button class="fecharjanelacriarconta">X</button>
       <h2>Crie sua conta</h2>
 	  <p>Nome</p>
+	  <div id="inputnomeecriarcontabtn">
 	  <input class="inputnomedousuario" placeholder="Digite seu nome aqui">
 	  <button class="criarcontabtn">Criar</button>
+	  </div>
 	  </div>
 	  <script>
 		  const criarcomunidadebtn = document.getElementById('criarcomunidadebtn');
