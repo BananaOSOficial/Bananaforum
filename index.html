@@ -324,8 +324,9 @@
 			  novomodelo.removeAttribute('id');
 			  novomodelo.style.display = 'block';
 			  const novoNome = inputNomedacomunidade.value;
-			  const nome = novomodelo.querySelector('.nome');
-			  nome.textContent = novoNome;
+			  const nomedacomunidade = novomodelo.querySelector('.nome');
+			  nomedacomunidade.textContent = novoNome;
+			  localStorage.setItem("comunidade", nomedacomunidade);
 			  nome.onclick = () => {
 		      janeladascomunidades.style.display = 'flex';
 		  };
@@ -377,8 +378,12 @@
 		  })
 		  window.onload = function() {
 			  const nomesalvo = localStorage.getItem("nomeUsuario");
+			  const nomedacomunidadesalvo = localStorage.getItem("comunidade");
 			  if (nomesalvo) {
 				  nomeusuario.textContent = nomesalvo;
+			  }
+			  if (nomedacomunidadesalvo) {
+				  nomedacomunidade.textContent = nomedacomunidadesalvo;
 			  }
 		  }
 		  const fecharjanelacriarconta = document.querySelector('.fecharjanelacriarconta');
