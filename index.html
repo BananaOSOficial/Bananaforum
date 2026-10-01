@@ -355,9 +355,8 @@
 		  }
 		  const criarcontabtn = document.querySelector('.criarcontabtn');
 		  const inputnomedousuario = document.querySelector('.inputnomedousuario');
-		  const nomedousuario = inputnomedousuario.value;
 		  criarcontabtn.addEventListener('click', () => {
-			  nomeusuario.textContent = nomedousuario;
+			  nomeusuario.textContent = inputdonomedousuario.value;
 			  inputnomedousuario.value = "";
 			  janelacriarconta.style.display = 'none';
 		  })
