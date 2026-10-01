@@ -358,7 +358,13 @@
 		  const nomedousuario = inputnomedousuario.value;
 		  criarcontabtn.addEventListener('click', () => {
 			  nomeusuario.textContent = inputnomedousuario;
+			  inputnomedousuario.value = "";
+			  janelacriarconta.style.display = 'none';
 		  })
+		  const fecharjanelacriarconta = document.querySelector('.fecharjanelacriarconta');
+		  fecharjanelacriarconta.onclick = function() {
+			  janelacriarconta.style.display = 'none';
+		  }
 	  </script>
   </body>
 </html>
