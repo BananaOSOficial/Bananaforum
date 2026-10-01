@@ -193,11 +193,39 @@
 			position: fixed;
 			top: 0;
 		  }
+		#janelacriarconta button {
+			background-color: #303134;
+			border: 2px solid rgba(255,255,255,0.08);
+			border-radius: 999px;
+		}
+		#janelacriarconta button:hover {
+			background-color: #F7D117;
+			border-color: yellow;
+		}
+		.fecharjanelacriarconta {
+			width: 32px;
+			border-radius: 999px;
+			height: 32px;
+			background-color: #303134;
+			border: 2px solid rgba(255,255,255,0.08);
+		}
+		.fecharjanelacriarconta:hover {
+			background-color: #F7D117;
+			border-color: yellow;
+		}
+		#olaenomeusuario {
+			display: flex;
+			margin-right: 0;
+		}
     </style>
   </head>
   <body>
     <header>
     <h1><u>Banana Forum</u></h1>
+	<div id="olaenomeusuario">
+	<p>Olá,</p>
+	<p class="nomeusuario">Usuario</p>
+	</div>
     </header>
     <div id="menucominicioecriarcomunidade">
       <button id="iniciobtn" title="Ínicio"><svg fill="#FFFFFF" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -261,6 +289,7 @@
       <h2>Crie sua conta</h2>
 	  <p>Nome</p>
 	  <input class="inputnomedousuario" placeholder="Digite seu nome aqui">
+	  <button class="criarcontabtn">Criar</button>
 	  </div>
 	  <script>
 		  const criarcomunidadebtn = document.getElementById('criarcomunidadebtn');
@@ -319,6 +348,17 @@
 		  janeladascomunidades.style.display = 'none';
 		  iniciobtn.classList.add('selecionado');
 		  }
+		  const nomeusuario = document.querySelector('.nomeusuario');
+		  const janelacriarconta = document.getElementById('janelacriarconta');
+		  nomeusuario.onclick = function() {
+		  janelacriarconta.style.display = 'block';
+		  }
+		  const criarcontabtn = document.querySelector('.criarcontabtn');
+		  const inputnomedousuario = document.querySelector('.inputnomedousuario');
+		  const nomedousuario = inputnomedousuario.value;
+		  criarcontabtn.addEventListener('click', () => {
+			  nomeusuario.textContent = inputnomedousuario;
+		  })
 	  </script>
   </body>
 </html>
