@@ -40,7 +40,16 @@
         text-align: center;
 		width: 100%;
 		font-size: medium;
+		animation: 2s piscarh1 infinite;
       }
+		@keyframes piscarh1 {
+			0%, 100% {
+				opacity: 0;
+			}
+			50% {
+				opacity: 1;
+			}
+		}
 		p {
 			font-weight: bold;
 		}
