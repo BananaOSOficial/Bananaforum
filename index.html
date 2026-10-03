@@ -316,6 +316,7 @@
 	  <div id="janeladascomunidades">
 		  <button class="fecharjaneladascomunidades">X</button>
 		  <div class="caixa-conversa">
+			  <p id="nomedapessoanochat">nome</p>
 			  <p class="texto-conversa"></p>
 		  </div>
 		  <div class="container-conversa"></div>
@@ -414,6 +415,8 @@
 			  localStorage.setItem("nomeUsuario", nome);
 			  inputnomedousuario.value = "";
 			  janelacriarconta.style.display = 'none';
+			  const nomedapessoanochat = novacaixaconversa.querySelector('#nomedapessoanochat');
+			  nomedapessoanochat.textContent = nomeusuario;
 		  })
 		  window.onload = function() {
 			  const nomesalvo = localStorage.getItem("nomeUsuario");
