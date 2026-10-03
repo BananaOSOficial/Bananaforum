@@ -413,10 +413,10 @@
 				  return;
 			  }
 			  localStorage.setItem("nomeUsuario", nome);
+			  const nomedapessoanochat = document.getElementById('nomedapessoanochat');
+			  nomedapessoanochat.textContent = inputnomedousuario.value;
 			  inputnomedousuario.value = "";
 			  janelacriarconta.style.display = 'none';
-			  const nomedapessoanochat = document.querySelector('#nomedapessoanochat');
-			  nomedapessoanochat.textContent = inputnomedousuario.value;
 		  })
 		  window.onload = function() {
 			  const nomesalvo = localStorage.getItem("nomeUsuario");
